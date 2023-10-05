@@ -12,6 +12,7 @@
   "dependencies": {
     "@apollo/client": "^3.8.4",
     "@crystallize/reactjs-components": "^2.0.0",
+    "classnames": "^2.3.2",
     "graphql": "^16.8.1",
     "next": "latest",
     "react": "latest",
