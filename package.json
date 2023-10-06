@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:server": "next build && next start",
+    "setup": "npm install && npm run dev",
     "start": "next start",
     "lint": "next lint"
   },

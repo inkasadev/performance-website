@@ -1,40 +1,100 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Performance Website <!-- omit in toc -->
 
-## Getting Started
+Example of a SEO friendly, performance focused website built getting data from a GraphQL query.
 
-First, run the development server:
+![example workflow](https://github.com/inkasadev/performance-website/actions/workflows/publish.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<p align="center" >
+    <img src="media/cover.png">
+</p>
+
+## Summary <!-- omit in toc -->
+
+- [Technologies Used](#technologies-used)
+- [Reports](#reports)
+  - [Mobile](#mobile)
+  - [Desktop](#desktop)
+- [Architecture and Directories](#architecture-and-directories)
+- [Local Configuration](#local-configuration)
+- [Possible Improvements](#possible-improvements)
+- [Authors](#authors)
+- [License](#license)
+
+## Technologies Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) & [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [Next.js](https://nextjs.org/) for SSR
+- [NPM](https://www.npmjs.com/)
+- [Github Actions](https://docs.github.com/en/actions) for CI/CD
+
+
+## Reports
+
+### Mobile
+
+<p align="center" >
+    <img src="media/perf-mobile.jpg">
+</p>
+
+### Desktop
+
+<p align="center" >
+    <img src="media/perf-desktop.jpg">
+</p>
+
+## Architecture and Directories
+
+This section provides an in-depth overview of the structural design and organization of this codebase. It outlines the directories that make up the app's architecture, helping developers understand how the project is structured.
+
+```
+Project
+├── .github
+│   ├── workflows: Github Actions workflows
+├── public: Public HTML, images, and other assets that are served as-is by the web server
+├── src
+│   ├── components: React components used throughout the website
+│   ├── graphql: GraphQL-related code, such as queries, mutations, or schema definitions
+│   ├── lib: Functions or code that is used across different parts of the website
+│   ├── pages: Contains all pages of the app, with each file representing a route
+│   ├── styles: Store CSS or stylesheets
+|── .eslintrc.json: ESLint project configuration.
+|── .gitignore: Specifies files to Git ignore
+├── package.json: File that manages all the dependecies and contains script definitions.
+|── next.config.ts: Next configuration.
+|── tsconfig.json: TS configuration.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Configuration
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+After cloning the project, enter in the project root and run the following command:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```sh
+$ npm run setup
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- By default the application will be started at port 3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Possible Improvements
 
-## Learn More
+A system is never perfect and there is always room for improvement. Here are some points that I would like to enhance if I had more time:
 
-To learn more about Next.js, take a look at the following resources:
+- Improve mobile performance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Authors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| ![Phillipe Martins](https://avatars.githubusercontent.com/u/7750404?v=4&s=150) |
+| :----------------------------------------------------------------------------: |
+|               [Phillipe Martins](https://github.com/inkasadev/)                |
 
-## Deploy on Vercel
+See also the list of
+[contributors](https://github.com/inkasadev/react-chat/contributors) who
+participated in this project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the
+[LICENSE.md](LICENSE.md) file for details
+
