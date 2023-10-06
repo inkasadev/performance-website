@@ -1,4 +1,5 @@
-import { ContentTransformer, Image } from "@crystallize/reactjs-components";
+import { ContentTransformer } from "@crystallize/reactjs-components";
+import Image from "next/image";
 import React from "react";
 
 interface IBlogPostContentProps {
@@ -15,11 +16,14 @@ export const BlogPostContent = ({ data }: IBlogPostContentProps) => {
           <div key={paragraphId}>
             <h2>{paragraph.title?.text}</h2>
             {paragraph.images?.map((image: any, contentId: number) => {
+              console.log("image => ", image);
               return (
                 paragraphId !== 0 && (
                   <Image
                     key={contentId}
-                    {...image}
+                    src={image.url}
+                    width={image.variants[image.variants.length - 1].width}
+                    height={image.variants[image.variants.length - 1].height}
                     alt={`${paragraph.title?.text || "blog post"} image`}
                     loading="lazy"
                   />
