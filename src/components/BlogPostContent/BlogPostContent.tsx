@@ -20,7 +20,7 @@ export const BlogPostContent = ({ data }: IBlogPostContentProps) => {
                   <Image
                     key={contentId}
                     {...image}
-                    alt={`${paragraph.title?.text || ""} image`}
+                    alt={`${paragraph.title?.text || "blog post"} image`}
                     loading="lazy"
                   />
                 )
